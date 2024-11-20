@@ -1,7 +1,7 @@
 stages:
   - test
 
-image: python: 3.12
+image: python:3.12
 
 before_script:
   - echo "Setting up environment"
