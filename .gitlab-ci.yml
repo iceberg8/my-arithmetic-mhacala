@@ -1,0 +1,8 @@
+stages:
+  - test
+
+test_job:
+  stage: test
+  scripts:
+    - echo "Running tests"
+    - hatch test
