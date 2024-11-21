@@ -1,9 +1,9 @@
-name: Deploy
+name: Dev
 
 on:
   push:
     branches:
-      - develop
+      - dev
   create:
     tags:
       - '*'
