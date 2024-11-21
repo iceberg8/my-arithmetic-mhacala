@@ -19,9 +19,9 @@ test_job:
 build_and_display:
   stage: build
   script:
-    - echo "Déloiement d'une nouvelle version taguée"
+    - echo "my-arithmetic-mhacala deployment on stable servers"
     - hatch build
-    - echo "Contenu du dossier dist/:"
+    - echo "dist/:"
     - ls -l dist/
   only:
     - tags
