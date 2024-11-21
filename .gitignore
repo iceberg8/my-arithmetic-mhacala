@@ -9,6 +9,7 @@ __pycache__/
 .pytest_cache/
 test/__pycache__
 src/my-arithmetic_mhacala/__pycache__
+_version.py
 # C extensions
 *.so
 
