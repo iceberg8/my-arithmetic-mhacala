@@ -1,4 +1,4 @@
-![coverage](https://gitlab.univ-lr.fr/mhacala/my-arithmetic-mhacala/badges/main/coverage.svg?job=test)
+![coverage](https://gitlab.univ-lr.fr/mhacala/my-arithmetic-mhacala/badges/main/coverage.svg?job=test_job)
 
 # my-arithmetic-mhacala
 
