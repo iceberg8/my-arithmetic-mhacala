@@ -12,4 +12,6 @@ test_job:
   stage: test
   script:
     - echo "Running tests"
-    - hatch test
+    - hatch test-c
+
+  coverage: '/\s+(\d+%)$/'

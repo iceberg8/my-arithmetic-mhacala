@@ -1,3 +1,5 @@
+![coverage](https://gitlab.univ-lr.fr/mhacala/my-arithmetic-mhacala/badges/main/coverage.svg?job=test)
+
 # my-arithmetic-mhacala
 
 [![PyPI - Version](https://img.shields.io/pypi/v/my-arithmetic-mhacala.svg)](https://pypi.org/project/my-arithmetic-mhacala)
