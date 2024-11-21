@@ -1,5 +1,6 @@
 stages:
   - test
+  - build
 
 image: python:3.12
 
@@ -13,5 +14,13 @@ test_job:
   script:
     - echo "Running tests"
     - hatch test -c
-
   coverage: '/\s+(\d+%)$/'
+
+build_and_display:
+  stage: build
+  script:
+    - echo "Dploiement d'une nouvelle version taguée"
+    - hatch build
+    - echo "Contenu du dossier dist/:"
+  only:
+    - tags
