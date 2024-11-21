@@ -25,3 +25,4 @@ build_and_display:
     - ls -l dist/
   only:
     - tags
+    - dev
