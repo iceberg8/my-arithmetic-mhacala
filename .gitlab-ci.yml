@@ -16,7 +16,7 @@ test_job:
     - hatch test -c
   coverage: '/\s+(\d+%)$/'
 
-build_and_display:
+build_hatch:
   stage: build
   script:
     - echo "my-arithmetic-mhacala deployment on stable servers"
@@ -25,4 +25,13 @@ build_and_display:
     - ls -l dist/
   only:
     - tags
+
+build_dev:
+  stage: build
+  script:
+    - echo "my-arithmetic-mhacala deployment on develop servers"
+    - hatch build
+    - echo "dist/:"
+    - ls -l dist/
+  only:
     - dev
