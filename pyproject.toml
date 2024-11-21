@@ -33,6 +33,7 @@ Source = "https://github.com/mhacala/my-arithmetic-mhacala"
 
 [tool.hatch.version]
 path = "src/my_arithmetic_mhacala/__about__.py"
+source = "vcs"
 
 [tool.hatch.envs.types]
 extra-dependencies = [
@@ -40,6 +41,9 @@ extra-dependencies = [
 ]
 [tool.hatch.envs.types.scripts]
 check = "mypy --install-types --non-interactive {args:src/my_arithmetic_mhacala tests}"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "_version.py"
 
 [tool.coverage.run]
 source_pkgs = ["my_arithmetic_mhacala", "tests"]
