@@ -1,8 +1,37 @@
 stages:
   - test
+  - build
+
+image: python:3.12
+
+before_script:
+  - echo "Setting up environment"
+  - pip install --upgrade pip
+  - pip install hatch
 
 test_job:
   stage: test
-  scripts:
+  script:
     - echo "Running tests"
-    - hatch test
+    - hatch test -c
+  coverage: '/\s+(\d+%)$/'
+
+build_hatch:
+  stage: build
+  script:
+    - echo "my-arithmetic-mhacala deployment on stable servers"
+    - hatch build
+    - echo "dist/:"
+    - ls -l dist/
+  only:
+    - tags
+
+build_dev:
+  stage: build
+  script:
+    - echo "my-arithmetic-mhacala deployment on develop servers"
+    - hatch build
+    - echo "dist/:"
+    - ls -l dist/
+  only:
+    - dev
